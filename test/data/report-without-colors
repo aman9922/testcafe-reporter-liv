@@ -1,0 +1,84 @@
+[First fixture]
+  [✓] First test in first fixture
+  [✖] Second test in first fixture
+
+  1) undefinedA JavaScript error occurred on "http://example.org".
+     Repeat test actions in the browser and check the console for errors.
+     To ignore client-side JavaScript errors, enable the "--skip-js-errors" CLI option, or set the "skipJsErrors" configuration file property to "true".
+     If the website only throws this error when you test it with TestCafe, please create a new issue at:
+     "https://github.com/DevExpress/testcafe/issues/new?template=bug-report.md".
+
+     JavaScript error details:
+     Some error
+
+     Browser: Chrome 41.0.2227 / Mac OS X 10.10.1
+     Screenshot: /screenshots/1445437598847/errors
+
+        1 |var createCallsiteRecord = require('callsite-record');
+        2 |
+        3 |function someFunc () {
+      > 4 |    throw new Error('Hey ya!');
+        5 |}
+        6 |
+        7 |try {
+        8 |    someFunc();
+        9 |}
+
+        at someFunc (/Users/amangupta/Desktop/report/liv/test/utils/test-callsite.js:4:11)
+        at Object.<anonymous> (/Users/amangupta/Desktop/report/liv/test/utils/test-callsite.js:8:5)
+        at Object.<anonymous> (/Users/amangupta/Desktop/report/liv/test/utils/reporter-test-calls.js:4:38)
+
+  2) undefinedThe specified selector does not match any element in the DOM tree.
+
+        | one
+      > |   two
+        |   three
+
+     Browser: Firefox 47 / Mac OS X 10.10.1
+
+        1 |var createCallsiteRecord = require('callsite-record');
+        2 |
+        3 |function someFunc () {
+      > 4 |    throw new Error('Hey ya!');
+        5 |}
+        6 |
+        7 |try {
+        8 |    someFunc();
+        9 |}
+
+        at someFunc (/Users/amangupta/Desktop/report/liv/test/utils/test-callsite.js:4:11)
+        at Object.<anonymous> (/Users/amangupta/Desktop/report/liv/test/utils/test-callsite.js:8:5)
+        at Object.<anonymous> (/Users/amangupta/Desktop/report/liv/test/utils/reporter-test-calls.js:4:38)
+  [✓] Third test in first fixture
+
+[Second fixture]
+  [✓] First test in second fixture
+  [✓] Second test in second fixture
+  [✓] Third test in second fixture
+
+[Third fixture]
+  [✖] First test in third fixture
+
+  1) undefinedThe specified selector does not match any element in the DOM tree.
+
+        | one
+      > |   two
+        |   three
+
+     Browser: Firefox 47 / Mac OS X 10.10.1
+
+        1 |var createCallsiteRecord = require('callsite-record');
+        2 |
+        3 |function someFunc () {
+      > 4 |    throw new Error('Hey ya!');
+        5 |}
+        6 |
+        7 |try {
+        8 |    someFunc();
+        9 |}
+
+        at someFunc (/Users/amangupta/Desktop/report/liv/test/utils/test-callsite.js:4:11)
+        at Object.<anonymous> (/Users/amangupta/Desktop/report/liv/test/utils/test-callsite.js:8:5)
+        at Object.<anonymous> (/Users/amangupta/Desktop/report/liv/test/utils/reporter-test-calls.js:4:38)
+
+3/7 failed (Duration: 15m 25s)

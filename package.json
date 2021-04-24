@@ -1,0 +1,49 @@
+{
+  "name": "testcafe-reporter-liv",
+  "version": "1.0.0",
+  "description": "liv TestCafe reporter plugin.",
+  "repository": "https://github.com/aman9922/testcafe-reporter-liv",
+  "author": {
+    "name": "Aman Gupta",
+    "email": "aman.gupta@livspace.com"
+  },
+  "main": "lib/index",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "gulp test",
+    "publish-please": "publish-please",
+    "prepublish": "publish-please guard"
+  },
+  "keywords": [
+    "testcafe",
+    "reporter",
+    "plugin"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "callsite-record": "^3.2.0",
+    "del": "^1.2.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-mocha": "^6.0.0",
+    "minimist": "^1.2.5",
+    "normalize-newline": "^1.0.2",
+    "publish-please": "^5.4.3",
+    "read-file-relative": "^1.2.0",
+    "testcafe": "^1.0.1"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
+    "@babel/runtime": "^7.3.4",
+    "axios": "^0.21.1",
+    "promise": "^8.1.0",
+    "yallist": "^4.0.0"
+  }
+}
