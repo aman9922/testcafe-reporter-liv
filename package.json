@@ -1,11 +1,11 @@
 {
-  "name": "testcafe-reporter-liv",
+  "name": "@aman99/testcafe-reporter-liv",
   "version": "1.0.0",
   "description": "liv TestCafe reporter plugin.",
   "repository": "https://github.com/aman9922/testcafe-reporter-liv",
   "author": {
     "name": "Aman Gupta",
-    "email": "aman.gupta@livspace.com"
+    "email": "amangupta9922@gmail.com"
   },
   "main": "lib/index",
   "files": [
