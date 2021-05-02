@@ -1,13 +1,16 @@
-const api = require('./api.js');
+const Report = require('./report');
 
 module.exports = function () {
+    const report = new Report();
+
     return {
         noColors: true,
 
         reportTaskStart (startTime, userAgents, testCount) {
             this.startTime = startTime;
             this.testCount = testCount;
-
+            this.userAgents = userAgents;
+            report.startLaunch();
             // this.write(`Running tests in: ${userAgents}`)
             //     .newline();
         },
@@ -17,6 +20,7 @@ module.exports = function () {
                 .setIndent(0)
                 .write(`[${this.chalk.blue(name)}]`)
                 .newline();
+            report.captureFixtureItem(name);
         },
 
         reportTestStart (/* name, testMeta */) {
@@ -24,8 +28,8 @@ module.exports = function () {
         },
 
         reportTestDone (name, testRunInfo) {
-            //const self = this;
-            const hasErr = !!testRunInfo.errs.length;
+            const self = this;
+            const hasErr = !!testRunInfo.errs.length;//
             //const result = testRunInfo.skipped ? 'skipped' : hasErr ? 'failed' : 'passed';
             var result = '';
 
@@ -48,7 +52,7 @@ module.exports = function () {
             else 
                 title = `[${this.chalk.red.bold('✖')}] ${name}`;
             
-            api();
+            report.captureTestItem( name, result, testRunInfo, self);
 
             this.setIndent(2)
                 .write(`${title}`)

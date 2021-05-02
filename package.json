@@ -44,7 +44,9 @@
     "@babel/plugin-syntax-class-properties": "^7.12.13",
     "@babel/runtime": "^7.3.4",
     "axios": "^0.21.1",
+    "fs": "0.0.1-security",
     "promise": "^8.1.0",
+    "strip-ansi": "^5.0.0",
     "yallist": "^4.0.0"
   },
   "resolutions": {
