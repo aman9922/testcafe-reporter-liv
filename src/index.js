@@ -27,7 +27,7 @@ module.exports = function () {
             // NOTE: This method is optional.
         },
 
-        reportTestDone (name, testRunInfo) {
+        async reportTestDone (name, testRunInfo) {
             const self = this;
             const hasErr = !!testRunInfo.errs.length;//
             //const result = testRunInfo.skipped ? 'skipped' : hasErr ? 'failed' : 'passed';
@@ -52,7 +52,7 @@ module.exports = function () {
             else 
                 title = `[${this.chalk.red.bold('✖')}] ${name}`;
             
-            report.captureTestItem( name, result, testRunInfo, self);
+            await report.captureTestItem( name, result, testRunInfo, self);
 
             this.setIndent(2)
                 .write(`${title}`)

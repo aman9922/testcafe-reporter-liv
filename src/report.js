@@ -20,7 +20,7 @@ class Report {
         this.fixtureName = fixtureName;
     }
 
-    captureTestItem (stepName, status, testRunInfo, parentSelf) {
+    async captureTestItem (stepName, status, testRunInfo, parentSelf) {
         var screenShotArr = [];
         var errorArr = [];
 
@@ -49,7 +49,7 @@ class Report {
             });
         }
 
-        api(this.projectName, this.environment, this.build, this.fixtureName, stepName, status, testRunInfo.durationMs, screenShotArr, errorArr, this.tag);
+        await api(this.projectName, this.environment, this.build, this.fixtureName, stepName, status, testRunInfo.durationMs);
         console.log('Log start ###### ' + this.projectName, this.environment, this.build, this.fixtureName, stepName, status, testRunInfo.durationMs, screenShotArr, errorArr + ' ########');
     }
 
