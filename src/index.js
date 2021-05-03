@@ -1,4 +1,5 @@
 const Report = require('./report');
+const api = require('./api.js');
 
 module.exports = function () {
     const report = new Report();
@@ -52,7 +53,8 @@ module.exports = function () {
             else 
                 title = `[${this.chalk.red.bold('✖')}] ${name}`;
             
-            await report.captureTestItem( name, result, testRunInfo, self);
+            //report.captureTestItem( name, result, testRunInfo, self);
+            await api(name, result, testRunInfo, self);
 
             this.setIndent(2)
                 .write(`${title}`)
