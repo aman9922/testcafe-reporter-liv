@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "fs": "0.0.1-security",
+    "fs": "0.0.2",
     "strip-ansi": "^5.0.0",
     "yallist": "^4.0.0"
   }
