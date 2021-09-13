@@ -39,7 +39,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "fs": "0.0.1-security",
-    "strip-ansi": "^5.0.0",
+    "strip-ansi": "^7.0.0",
     "yallist": "^4.0.0"
   }
 }
